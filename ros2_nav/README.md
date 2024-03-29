@@ -8,7 +8,7 @@ ROS humble
 #### Build docker 
 ```bash
 # Build docker: the image name 
-./build_docker.sh image_name
+./build_docker.sh
 
 ```
 
