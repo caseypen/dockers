@@ -1,5 +1,6 @@
 xhost +
 docker run -it --net=host --rm --gpus all \
+    --privileged \
     --env="NVIDIA_DRIVER_CAPABILITIES=all" \
     --env="DISPLAY" \
     --env="QT_X11_NO_MITSHM=1" \

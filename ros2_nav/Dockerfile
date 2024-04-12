@@ -22,7 +22,7 @@ RUN mkdir -p /codes/acados/build && \
     make -j4
 
 # Install Python interfaces
-RUN cd /acados/interfaces/acados_template/ && \
+RUN cd /codes/acados/interfaces/acados_template/ && \
     pip3 install -e .
 
 # Environment variables
@@ -36,3 +36,11 @@ RUN echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
 # for ROS2
 RUN source /opt/ros/humble/setup.bash 
 ENV export ROS_MAIN_ID=0
+
+RUN apt-get update
+# RUN apt-get upgrade
+RUN apt-get install -y ros-humble-xacro
+RUN pip install numba
+RUN pip install shapely 
+RUN pip install pandas
+
