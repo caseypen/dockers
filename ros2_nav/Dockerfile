@@ -38,10 +38,10 @@ RUN source /opt/ros/humble/setup.bash
 ENV export ROS_MAIN_ID=0
 
 RUN apt-get update
-# RUN apt-get upgrade
+RUN apt upgrade -y
 RUN apt-get install -y ros-humble-xacro
 RUN pip install numba
 RUN pip install shapely 
 RUN pip install pandas
-RUN apt-get install ros-humble-robot-localization
+RUN apt-get install -y ros-humble-robot-localization
 
