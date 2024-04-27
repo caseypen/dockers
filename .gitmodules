@@ -1,0 +1,3 @@
+[submodule "ros2_nav/acados"]
+	path = ros2_nav/acados
+	url = git@github.com:AgRoboticsResearch/acados.git
